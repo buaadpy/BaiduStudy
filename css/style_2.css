@@ -1,0 +1,57 @@
+h1,h2,p,div,ul,li,dl,dt,dd {
+    margin:0;
+    padding:0;
+}
+
+li {
+    list-style: none;
+    float:left;
+    margin-right:40px;
+}
+
+.item {
+    margin:16px 0;
+}
+
+.item:after{
+    content:"";
+    display: block;
+    height:0px;
+    visibility: hidden;
+    clear:both;
+}
+
+h2 {
+    margin:10px 0 20px 0;
+}
+
+li span{
+    font-weight: bold;
+    margin-right:10px;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin-bottom:10px;
+}
+
+.sidebar {
+    float: left;
+    width:16%;
+    background-color:#1E90FF;
+    height:680px;
+}
+
+.main {
+    float: right;
+    width:82%;
+}
+
+h1 {
+    color:#FFFFFF;
+    text-align:center;
+    margin-top:40px;
+}
