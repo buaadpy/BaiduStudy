@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <style type="text/css">
+        div {
+            margin:0;
+            padding:0;
+        }
+        .wrapper{
+            border:#000000 solid 2px;
+        }
+        .wrapper:after{
+            content:"";
+            display: block;
+            clear:both;
+            visibility: hidden;
+            height:0;
+        }
+        .left{
+            width:30%;
+            height:200px;
+            background-color: red;
+            float:left;
+        }
+        .right{
+            width:70%;
+            height:300px;
+            background-color: blue;
+            float:left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="left">
+        </div>
+        <div class="right">
+        </div>
+    </div>
+</body>
+
+</html>
