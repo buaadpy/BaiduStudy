@@ -1,0 +1,177 @@
+body,
+div,
+a,
+p,
+h2,
+ul,
+li,
+span {
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    list-style: none;
+}
+
+.comWidth {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.header {
+    height: 80px;
+    width: 100%;
+    background-color: #333333;
+}
+
+.header h2 {
+    float: left;
+    color: #FFFFFF;
+    font-weight: normal;
+    line-height: 80px;
+}
+
+.header ul {
+    float: right;
+    padding-top: 10px;
+}
+
+.header li {
+    float: left;
+    margin-left: 10px;
+}
+
+.header li a {
+    color: #FFFFFF;
+    font-size: 14px;
+}
+
+.banner {
+    height: 300px;
+    width: 100%;
+    background-color: #66BB33;
+}
+
+.banner .banner-content{
+    position:relative;
+    height:300px;
+}
+
+.banner ul{
+    position: absolute;
+    right:0;
+    bottom:0;
+}
+
+.banner li {
+    float:left;
+    margin-left:6px;
+}
+
+.banner span {
+    display: inline-block;
+    width:30px;
+    height:36px;
+    border:#000000 solid 1px;
+    background-color:#B2DD99;
+    text-align:center;
+    line-height:30px;
+    color:#51813D;
+    line-height:36px;
+}
+
+.banner .active{
+    background-color: #E0F1D6;
+    position:relative;
+    bottom:14px;
+    padding-top:14px;
+}
+
+.nav {
+    height: 70px;
+    border-bottom:#DDDDDD solid 1px;
+}
+
+.nav ul{
+    padding-top:19px;
+}
+
+.nav li {
+    float:left;
+}
+
+.nav span{
+    border:#DDDDDD solid 1px;
+    padding:0 30px;
+    height:50px;
+    display: inline-block;
+    background-color: #EEEEEE;
+    font-size:14px;
+    line-height:50px;
+    border-top-left-radius:25px;
+    border-top-right-radius:25px;
+}
+
+.nav .active{
+    border-bottom:#FFFFFF solid 1px;
+    background-color: #FFFFFF;
+}
+
+.content .content-top div,
+.content .content-middle div,
+.content .content-bottom div
+{
+    height:176px;
+    border:#CCCCCC solid 1px;
+    text-align:center;
+    line-height:176px;
+}
+
+.content .content-top,
+.content .content-middle,
+.content .content-bottom
+ {
+    margin-top:10px;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+}
+
+.content .content-top .content1,
+.content .content-top .content2
+{
+    width:324px;
+    height:176px;
+}
+
+.content .content-top .content3
+{
+    width:280px;
+    height:176px;
+}
+
+.content .content-middle div{
+    width:230px;
+}
+
+.content .content-bottom div{
+    width:306px;
+}
+
+.content .content-bottom{
+    margin-bottom:10px;
+}
+
+.footer {
+    height: 120px;
+    width: 100%;
+    background-color: #666666;
+    text-align:center;
+}
+
+.footer p {
+    font-size:14px;
+    color:#FFFFFF;
+    padding-top:20px;
+}
