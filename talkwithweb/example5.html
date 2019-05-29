@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>笑容动画</title>
+    <style>
+        .smile {
+            width:480px;
+            height:480px;
+
+            background: url(pic.jpg) 0 0 no-repeat;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="smile"></div>
+    <script>
+        document.body.onload = function(){
+            var point = 0;
+            var flag = true;
+            setInterval(function(){
+                if (flag){
+                    point -= 480;
+                    if (point <= -8160){
+                        point += 480*2;
+                        flag = !flag;
+                    }
+                }else{
+                    point += 480;
+                    if (point > 0){
+                        point -= 480*2;
+                        flag = !flag;
+                    }
+                }
+                
+                document.getElementsByClassName("smile")[0].style.backgroundPosition = "0px " + point + "px";
+            },
+            100);
+        }
+    </script>
+</body>
+
+</html>
