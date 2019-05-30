@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>clock2</title>
+    <style>
+    </style>
+</head>
+
+<body>
+    <select id="year-select">
+        <option value="2000">2000</option>
+        <option value="2001">2001</option>
+        <option value="2002">2002</option>
+        <option value="2003">2003</option>
+        <option value="2004">2004</option>
+        <option value="2005">2005</option>
+        <option value="2006">2006</option>
+        <option value="2007">2007</option>
+        <option value="2008">2008</option>
+        <option value="2009">2009</option>
+        <option value="2010">2010</option>
+        <option value="2011">2011</option>
+        <option value="2012">2012</option>
+        <option value="2013">2013</option>
+        <option value="2014">2014</option>
+        <option value="2015">2015</option>
+        <option value="2016">2016</option>
+        <option value="2017">2017</option>
+        <option value="2018">2018</option>
+        <option value="2019">2019</option>
+        <option value="2020">2020</option>
+        <option value="2021">2021</option>
+        <option value="2022">2022</option>
+        <option value="2023">2023</option>
+        <option value="2024">2024</option>
+        <option value="2025">2025</option>
+        <option value="2026">2026</option>
+        <option value="2027">2027</option>
+        <option value="2028">2028</option>
+        <option value="2029">2029</option>
+    </select>
+
+    <select id="month-select">
+        <option value="0">1</option>
+        <option value="1">2</option>
+        <option value="2">3</option>
+        <option value="3">4</option>
+        <option value="4">5</option>
+        <option value="5">6</option>
+        <option value="6">7</option>
+        <option value="7">8</option>
+        <option value="8">9</option>
+        <option value="9">10</option>
+        <option value="10">11</option>
+        <option value="11">12</option>
+    </select>
+
+    <select id="day-select">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+        <option value="24">24</option>
+        <option value="25">25</option>
+        <option value="26">26</option>
+        <option value="27">27</option>
+        <option value="28">28</option>
+        <option id="day29" value="29">29</option>
+        <option id="day30" value="30">30</option>
+        <option id="day31" value="31">31</option>
+    </select>
+
+    <select id="hour-select">
+        <option value="0">00</option>
+        <option value="1">01</option>
+        <option value="2">02</option>
+        <option value="3">03</option>
+        <option value="4">04</option>
+        <option value="5">05</option>
+        <option value="6">06</option>
+        <option value="7">07</option>
+        <option value="8">08</option>
+        <option value="9">09</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+    </select>
+
+    <select id="minute-select">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+        <option value="24">24</option>
+        <option value="25">25</option>
+        <option value="26">26</option>
+        <option value="27">27</option>
+        <option value="28">28</option>
+        <option value="29">29</option>
+        <option value="30">30</option>
+        <option value="31">31</option>
+        <option value="32">32</option>
+        <option value="33">33</option>
+        <option value="34">34</option>
+        <option value="35">35</option>
+        <option value="36">36</option>
+        <option value="37">37</option>
+        <option value="38">38</option>
+        <option value="39">39</option>
+        <option value="40">40</option>
+        <option value="41">41</option>
+        <option value="42">42</option>
+        <option value="43">43</option>
+        <option value="44">44</option>
+        <option value="45">45</option>
+        <option value="46">46</option>
+        <option value="47">47</option>
+        <option value="48">48</option>
+        <option value="49">49</option>
+        <option value="50">50</option>
+        <option value="51">51</option>
+        <option value="52">52</option>
+        <option value="53">53</option>
+        <option value="54">54</option>
+        <option value="55">55</option>
+        <option value="56">56</option>
+        <option value="57">57</option>
+        <option value="58">58</option>
+        <option value="59">59</option>
+    </select>
+
+    <select id="second-select">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+        <option value="24">24</option>
+        <option value="25">25</option>
+        <option value="26">26</option>
+        <option value="27">27</option>
+        <option value="28">28</option>
+        <option value="29">29</option>
+        <option value="30">30</option>
+        <option value="31">31</option>
+        <option value="32">32</option>
+        <option value="33">33</option>
+        <option value="34">34</option>
+        <option value="35">35</option>
+        <option value="36">36</option>
+        <option value="37">37</option>
+        <option value="38">38</option>
+        <option value="39">39</option>
+        <option value="40">40</option>
+        <option value="41">41</option>
+        <option value="42">42</option>
+        <option value="43">43</option>
+        <option value="44">44</option>
+        <option value="45">45</option>
+        <option value="46">46</option>
+        <option value="47">47</option>
+        <option value="48">48</option>
+        <option value="49">49</option>
+        <option value="50">50</option>
+        <option value="51">51</option>
+        <option value="52">52</option>
+        <option value="53">53</option>
+        <option value="54">54</option>
+        <option value="55">55</option>
+        <option value="56">56</option>
+        <option value="57">57</option>
+        <option value="58">58</option>
+        <option value="59">59</option>
+    </select>
+
+    <p id="result-wrapper">现在距离 2001年1月1日星期X HH:MM:SS 还有 X 天 X 小时 X 分 X 秒</p>
+
+    <script>
+        var selYear, selMonth, selDay, selHour, selMinute, selSecond;
+        var day29 = document.getElementById("day29");
+        var day30 = document.getElementById("day30");
+        var day31 = document.getElementById("day31");
+
+        var getSelectTime = function () {
+            selYear = document.getElementById("year-select").value;
+            selMonth = document.getElementById("month-select").value;
+            selDay = document.getElementById("day-select").value;
+            selHour = document.getElementById("hour-select").value;
+            selMinute = document.getElementById("minute-select").value;
+            selSecond = document.getElementById("second-select").value;
+        }
+
+        var undateResult = function () {
+            var fullNumber = function (n) {
+                return n < 10 ? "0" + n : n;
+            }
+            getSelectTime();
+            var text = "现在距离 ";
+            var nowTime = new Date();
+            var selectTime = new Date(selYear, selMonth, selDay, selHour, selMinute, selSecond);
+            var interval = Math.round(Math.abs(selectTime - nowTime) / 1000);
+            var word = selectTime - nowTime > 0 ? "还有" : "已经过去";
+            text += selYear + "年" + (Number(selMonth) + 1) + "月" + selDay + "日星期" + selectTime.getDay() + " " +
+                fullNumber(selHour) + ":" + fullNumber(selMinute) + ":" + fullNumber(selSecond) + " " + word + " " +
+                Math.floor(interval / (3600 * 24)) + "天";
+            interval = interval % (3600 * 24);
+            text += Math.floor(interval / 3600) + "小时";
+            interval = interval % 3600;
+            text += Math.floor(interval / 60) + "分";
+            interval = interval % 60;
+            text += interval + "秒";
+            document.getElementById("result-wrapper").innerText = text;
+        }
+
+        var changeDayRange = function (d, f) {
+            var opt;
+            if (d == 29) opt = day29;
+            if (d == 30) opt = day30;
+            if (d == 31) opt = day31;
+            if (f) {
+                if (opt.parentNode == null)
+                    document.getElementById("day-select").appendChild(opt);
+            } else {
+                document.getElementById("day-select").removeChild(opt);
+            }
+        }
+
+        setInterval(undateResult, 1000);
+
+        document.getElementById("year-select").onchange = function () {
+            getSelectTime();
+            var special = ((selYear % 100 != 0 && selYear % 4 == 0) ||
+                (selYear % 100 == 0 && selYear % 400 == 0)) ? true : false;
+            if (!special && selMonth == 1 && selDay == 29) {
+                document.getElementById("day-select").value = 1;
+            }
+            if (selMonth == 1){
+                special?changeDayRange(29, true):changeDayRange(29, false);
+            }
+            undateResult();
+        }
+        document.getElementById("month-select").onchange = function () {
+            getSelectTime();
+            switch (Number(selMonth) + 1) {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    changeDayRange(29, true);
+                    changeDayRange(30, true);
+                    changeDayRange(31, true);
+                    document.getElementById("day-select").value = selDay;
+                    break;
+                case 2:
+                    var special = ((selYear % 100 != 0 && selYear % 4 == 0) ||
+                        (selYear % 100 == 0 && selYear % 400 == 0)) ? true : false;
+                    if (!special) changeDayRange(29, false);
+                    if ((!special && selDay == 29) || selDay == 30 || selDay == 31)
+                        document.getElementById("day-select").value = 1;
+                    changeDayRange(30, false);
+                    changeDayRange(31, false);
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    changeDayRange(29, true);
+                    changeDayRange(30, true);
+                    document.getElementById("day-select").value = selDay;
+                    changeDayRange(31, false);
+                    if (selDay == 31)
+                        document.getElementById("day-select").value = 1;
+                    break;
+                default:
+                    break;
+            }
+            undateResult();
+        }
+        document.getElementById("day-select").onchange = undateResult();
+        document.getElementById("hour-select").onchange = undateResult();
+        document.getElementById("minute-select").onchange = undateResult();
+        document.getElementById("second-select").onchage = undateResult();
+    </script>
+</body>
+
+</html>

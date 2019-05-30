@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>clock</title>
+    <style>
+        div {
+            float: left;
+
+            width: 70px;
+            height: 70px;
+            margin-left: 30px;
+            margin-right: 5px;
+
+            font-size: 30px;
+            line-height: 70px;
+            text-align: center;
+
+            border: #000 solid 1px;
+        }
+
+        p {
+            float: left;
+            width: 30px;
+            height: 70px;
+
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="year"></div>
+    <p>年</p>
+    <div id="month"></div>
+    <p>月</p>
+    <div id="date"></div>
+    <p>日</p>
+    <div id="day"></div>
+    <p>星</p>
+    <div id="hour"></div>
+    <p>时</p>
+    <div id="minute"></div>
+    <p>分</p>
+    <div id="second"></div>
+    <p>秒</p>
+    <script>
+        setInterval(function () {
+            var date = new Date();
+            document.getElementById("year").innerText = date.getFullYear();
+            document.getElementById("month").innerText = fullNumber(date.getMonth() + 1);
+            document.getElementById("date").innerText = fullNumber(date.getDate());
+            document.getElementById("day").innerText = date.getDay();
+            document.getElementById("hour").innerText = fullNumber(date.getHours());
+            document.getElementById("minute").innerText = fullNumber(date.getMinutes());
+            document.getElementById("second").innerText = fullNumber(date.getSeconds());
+            show(date);
+        }, 1000);
+
+        var fullNumber = function (n) {
+            return n < 10 ? "0" + n : n;
+        }
+
+        var week = function (d) {
+            switch (d) {
+                case 1:
+                    return "Monday";
+                    break;
+                case 2:
+                    return "Tuesday";
+                    break;
+                case 3:
+                    return "Wednesday";
+                    break;
+                case 4:
+                    return "Thursday";
+                    break;
+                case 5:
+                    return "Friday";
+                    break;
+                case 6:
+                    return "Saturday";
+                    break;
+                case 0:
+                    return "Sunday";
+                    break;
+            }
+        }
+
+        var isAMorPM = function (h) {
+            return h < 12 ? "AM" : "PM";
+        }
+
+        var show = function (date) {
+            console.log(date.getFullYear() + "-" + fullNumber(date.getMonth() + 1) + "-" + fullNumber(date
+                    .getDate()) +
+                    " " + week(date.getDay()) + " " + fullNumber(date.getHours()) + ":" + fullNumber(date
+                    .getMinutes()) +
+                ":" + fullNumber(date.getSeconds()) + " " + isAMorPM(date.getHours()));
+        }
+    </script>
+</body>
+
+</html>
