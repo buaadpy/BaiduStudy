@@ -1,6 +1,8 @@
 var sourceData = require('./data');
 var table = require('./table');
 var checkbox = require('./checkbox');
+var bar = require('./bar');
+var line = require('./line');
 
 (function () {
     var selectRegion = document.getElementById('region');
@@ -9,6 +11,9 @@ var checkbox = require('./checkbox');
 
     checkbox.createCheckBox(selectRegion, ['华东', '华北', '华南']);
     checkbox.createCheckBox(selectProduct, ['手机', '笔记本', '智能音箱']);
+    
+    document.getElementById('histogram').innerHTML = bar.drawHistogram(sourceData[0].sale);
+    document.getElementById('linechart').innerHTML = line.drawLineChart(sourceData[0].sale);
 
     /*根据筛选条件筛选数据*/
     var selectData = function (region, product, option) {
