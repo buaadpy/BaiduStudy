@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>pushState</title>
+</head>
+
+<body>
+    <button id="a">A</button>
+    <button id="b">B</button>
+    <button id="c">C</button>
+
+    <button id="d">D</button>
+    <button id="e">E</button>
+    <button id="f">F</button>
+
+
+    <div id="contABC"></div>
+    <div id="contDEF"></div>
+
+    <script>
+        var pushState = function (e) {
+            var oldValue = history.state;
+            switch (e.target.id) {
+                case 'a':
+                case 'b':
+                case 'c':
+                    history.replaceState({
+                        'contABC': e.target.id,
+                        'contDEF': oldValue == null ? '' : oldValue.contDEF
+                    }, 'exp2.html');
+                    break;
+                case 'd':
+                case 'e':
+                case 'f':
+                    history.replaceState({
+                        'contABC': oldValue == null ? '' : oldValue.contABC,
+                        'contDEF': e.target.id
+                    }, 'exp2.html');
+                    break;
+            }
+            refresh();
+        }
+
+        var refresh = function () {
+            document.getElementById('contABC').innerText = history.state == null ? '' : history.state.contABC;
+            document.getElementById('contDEF').innerText = history.state == null ? '' : history.state.contDEF;
+        }
+
+        refresh();
+
+        document.getElementById('a').addEventListener('click', pushState);
+        document.getElementById('b').addEventListener('click', pushState);
+        document.getElementById('c').addEventListener('click', pushState);
+        document.getElementById('d').addEventListener('click', pushState);
+        document.getElementById('e').addEventListener('click', pushState);
+        document.getElementById('f').addEventListener('click', pushState);
+    </script>
+</body>
+
+</html>

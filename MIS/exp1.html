@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>hash</title>
+</head>
+
+<body>
+    <button id="a">A</button>
+    <button id="b">B</button>
+    <button id="c">C</button>
+
+    <button id="d">D</button>
+    <button id="e">E</button>
+    <button id="f">F</button>
+
+
+    <div id="contABC"></div>
+    <div id="contDEF"></div>
+
+    <script>
+        var changeHash = function (e) {
+            var f = location.hash.slice(1).slice(0, location.hash.indexOf('&')-1);
+            var l = location.hash.slice(location.hash.indexOf('&') + 1);
+            switch (e.target.id) {
+                case 'a':
+                case 'b':
+                case 'c':
+                    location.hash = e.target.id + '&' + l;
+                    break;
+                case 'd':
+                case 'e':
+                case 'f':
+                    location.hash = f + '&' + e.target.id;
+                    break;
+            }
+        }
+
+        var refresh = function () {
+            var f = location.hash.slice(1).slice(0, location.hash.indexOf('&')-1);
+            var l = location.hash.slice(location.hash.indexOf('&') + 1);
+            document.getElementById('contABC').innerText = f;
+            document.getElementById('contDEF').innerText = l;
+        }
+
+        window.onhashchange = refresh;
+        document.getElementById('a').addEventListener('click', changeHash);
+        document.getElementById('b').addEventListener('click', changeHash);
+        document.getElementById('c').addEventListener('click', changeHash);
+        document.getElementById('d').addEventListener('click', changeHash);
+        document.getElementById('e').addEventListener('click', changeHash);
+        document.getElementById('f').addEventListener('click', changeHash);
+
+        refresh();
+    </script>
+</body>
+
+</html>
