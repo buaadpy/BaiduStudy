@@ -11,9 +11,9 @@ var line = require('./line');
 
     checkbox.createCheckBox(selectRegion, ['华东', '华北', '华南']);
     checkbox.createCheckBox(selectProduct, ['手机', '笔记本', '智能音箱']);
-    
-    document.getElementById('histogram').innerHTML = bar.drawHistogram(sourceData[0].sale);
-    document.getElementById('linechart').innerHTML = line.drawLineChart(sourceData[0].sale);
+
+    document.getElementById('histogram').innerHTML = bar.drawHistogram();
+    line.drawLineChart(document.getElementById('linechart'));
 
     /*根据筛选条件筛选数据*/
     var selectData = function (region, product, option) {
@@ -40,17 +40,45 @@ var line = require('./line');
         return result;
     }
 
+    /*选择条件时触发事件*/
     var selectChange = function () {
         var region = checkbox.getSelect(selectRegion);
         var product = checkbox.getSelect(selectProduct);
         var option = {
-            countRegion : region.length,
-            countProduct : product.length
+            countRegion: region.length,
+            countProduct: product.length
         }
         var data = selectData(region, product, option);
         table.refreshTable(showTable, data, option);
     }
 
+    /*选择数据并画图*/
+    var showData = function (e) {
+        if (e.target == showTable || e.target.parentNode == showTable.firstChild.firstChild) return;
+        var row = e.target.parentNode.childNodes;
+        var data = [];
+        for (var i = row.length - 12; i < row.length; i++) {
+            data.push(+row[i].innerText);
+        }
+        document.getElementById('histogram').innerHTML = bar.drawHistogram(data);
+        line.drawLineChart(document.getElementById('linechart'), data);
+    }
+    var showAllData = function (e) {
+        var data = [];
+        var tableData = showTable.firstChild.childNodes;
+        for (var j = 1, len = tableData.length; j < len; j++){
+            var rowData = [];
+            var row = tableData[j].childNodes;
+            for (var i = row.length - 12; i < row.length; i++) {
+                rowData.push(+row[i].innerText);
+            }
+            data.push(rowData);
+        }
+        line.drawAllLineChart(document.getElementById('linechart'), data);
+    }
+
     selectRegion.addEventListener('click', selectChange);
     selectProduct.addEventListener('click', selectChange);
+    showTable.addEventListener('mouseover', showData);
+    showTable.addEventListener('mouseleave', showAllData);
 })();
